@@ -1,7 +1,7 @@
 import copy
 from random import Random
 
-from prefixes import MASTERCARD__PREFIXES
+from prefixes import *
 
 
 def completed_number(prefix, length, generator) -> str:
@@ -35,4 +35,4 @@ def credit_card_number(generator, prefix_list, length):
 def generate_random_card_number() -> str:
     generator = Random()
     generator.seed()  # Seed from current time
-    return credit_card_number(generator, MASTERCARD__PREFIXES, 16)
+    return credit_card_number(generator, BIN__PRIVAT_BANK, 16)
